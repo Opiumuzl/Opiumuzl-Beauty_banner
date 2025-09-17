@@ -14,3 +14,6 @@ As a result, you will receive a file with a banner in the style you specified, o
 ![Example_1](image/Example_1.png)
 
 ### and more 423...
+
+I use this script to create beautiful banners for SSH servers.
+I modify the MOTD files slightly and add the desired banner (for example, to `/etc/update-motd.d/00-header` ).
