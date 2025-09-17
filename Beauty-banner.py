@@ -48,8 +48,8 @@ def rebuild(text, font_name):                                    # Function to s
     else:
         font_text = Figlet(font='speed')
         return font_text.renderText(text)
-
-with open(f'{text}-banner.txt', 'w', encoding='utf-8') as file:   # Saves the output to a separate file named *-banner.txt.
-    for i in list_font:
-        font_text = Figlet(font=i)
-        print(f'\n\n{i}\n\n', font_text.renderText(text), file=file)
+print(len(list_font))
+#with open(f'{text}-banner.txt', 'w', encoding='utf-8') as file:   # Saves the output to a separate file named *-banner.txt.
+#    for i in list_font:
+#        font_text = Figlet(font=i)
+#        print(f'\n\n{i}\n\n', font_text.renderText(text), file=file)
