@@ -8,6 +8,8 @@ A script for creating "beautiful" banners from your text.
 
 ### Usage:
 just run `Beauty-banner.py` and follow the instructions.
+As a result, you will receive a file with a banner in the style you specified, or your text in all 425 styles.
+
 ### Example:
 ![Example_1](image/Example_1.png)
 
