@@ -38,10 +38,10 @@ list_font = ["1943____","3-d","3x5","4x4_offr","5lineoblique","5x7","5x8","64f1_
              "xcourb","xcourbi","xcouri","xhelv","xhelvb","xhelvbi","xhelvi","xsans","xsansb","xsansbi","xsansi","xsbook","xsbookb","xsbookbi","xsbooki","xtimes","xtty","xttyb",
              "yie-ar__","yie_ar_k","z-pilot_","zig_zag_","zone7___"]
 
-text = input("Ведите текст на английском: ")      # Переменная для текста в баннер.
-font_name = input('Введите название шрифта: ')    # Переменная для шрифта. 
+text = input("Enter text in English: ")                          # Variable for the text in the banner.
+font_name = input('Enter the font name(default:"speed"): ')      # Variable for the font. 
 
-def rebuild(text, font_name):                     # функция выбора шрифта c проверкой на указание его (Если не написать шрифт, то выдаст в предварительно заданном шрифте "speed").
+def rebuild(text, font_name):                                    # Function to select a font with validation (if no font is specified, it will default to the predefined "speed" font).
     if font_name != '':                                 
         font_text = Figlet(font=font_name)
         return font_text.renderText(text)
@@ -49,7 +49,7 @@ def rebuild(text, font_name):                     # функция выбора 
         font_text = Figlet(font='speed')
         return font_text.renderText(text)
 
-with open(f'{text}-banner.txt', 'w', encoding='utf-8') as file:   # Записывает вывод в отдельный файл с именем *-banner.txt .
+with open(f'{text}-banner.txt', 'w', encoding='utf-8') as file:   # Saves the output to a separate file named *-banner.txt.
     for i in list_font:
         font_text = Figlet(font=i)
         print(f'\n\n{i}\n\n', font_text.renderText(text), file=file)
