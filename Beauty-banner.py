@@ -1,6 +1,6 @@
 from pyfiglet import Figlet
 """
-    Преобразует в красивый текст типа:
+Converts to "beauty" text like:
  ___ ___ _______ _______ _____        ______ _______ _______ _______ _______ ______ 
 |   |   |       |   |   |   _ \______|   __ \   _   |    |  |    |  |    ___|   __ \
  \     /|   -   |   |   |     <______|   __ <       |       |       |    ___|      <
@@ -48,8 +48,8 @@ def rebuild(text, font_name):                                    # Function to s
     else:
         font_text = Figlet(font='speed')
         return font_text.renderText(text)
-print(len(list_font))
-#with open(f'{text}-banner.txt', 'w', encoding='utf-8') as file:   # Saves the output to a separate file named *-banner.txt.
-#    for i in list_font:
-#        font_text = Figlet(font=i)
-#        print(f'\n\n{i}\n\n', font_text.renderText(text), file=file)
+
+with open(f'{text}-banner.txt', 'w', encoding='utf-8') as file:   # Saves the output to a separate file named *-banner.txt .
+    for i in list_font:
+        font_text = Figlet(font=i)
+        print(f'\n\n{i}\n\n', font_text.renderText(text), file=file)
