@@ -1,12 +1,12 @@
 from pyfiglet import Figlet
-"""
+'''
 Converts to "beauty" text like:
  ___ ___ _______ _______ _____        ______ _______ _______ _______ _______ ______ 
 |   |   |       |   |   |   _ \______|   __ \   _   |    |  |    |  |    ___|   __ \
  \     /|   -   |   |   |     <______|   __ <       |       |       |    ___|      <
   |___| |_______|_______|___|_|      |______/___|___|__|____|__|____|_______|___|__|
                                                                               
-"""
+'''
 
 
 # Список шрифтов
@@ -38,14 +38,23 @@ list_font = ["1943____","3-d","3x5","4x4_offr","5lineoblique","5x7","5x8","64f1_
              "xcourb","xcourbi","xcouri","xhelv","xhelvb","xhelvbi","xhelvi","xsans","xsansb","xsansbi","xsansi","xsbook","xsbookb","xsbookbi","xsbooki","xtimes","xtty","xttyb",
              "yie-ar__","yie_ar_k","z-pilot_","zig_zag_","zone7___"]
 
+print('''\n
+ _____ _____ _____ _____ _____ __ __     _____ _____ _____ _____ _____ _____   
+| __  |   __|  _  |  |  |_   _|  |  |___| __  |  _  |   | |   | |   __| __  |  
+| __ -|   __|     |  |  | | | |_   _|___| __ -|     | | | | | | |   __|    -|  
+|_____|_____|__|__|_____| |_|   |_|     |_____|__|__|_|___|_|___|_____|__|__|  
+ 
+      Make your banner beautiful...
+\n
+      ''')
 text = input("Enter text in English: ")                          # Variable for the text in the banner.
 font_name = input('Enter the font name(example:"speed" or leave blank to get all styles): ')      # Variable for the font. 
 
 with open(f'{text}-banner.txt', 'w', encoding='utf-8') as file:   # Saves the output to a separate file named *-banner.txt .
     if font_name != '':                                 
         font_text = Figlet(font=font_name)
-        print(f'\n\n{font_name}\n\n', font_text.renderText(text), file=file)
+        print(f'\n\n{font_name}\n\n', font_text.renderText(text.upper()), file=file)
     else:
         for i in list_font:
             font_text = Figlet(font=i)
-            print(f'\n\n{i}\n\n', font_text.renderText(text), file=file)
+            print(f'\n\n{i}\n\n', font_text.renderText(text.upper()), file=file)
